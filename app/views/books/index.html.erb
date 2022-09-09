@@ -1,11 +1,15 @@
 <p id="notice"><%= notice %></p>
+<center>
+<h1>NNNNEWWWW bOOk cool!</h1>
+<h1>AAAAAAAAAAA WORK PLEASE </h1>
 
-<h1>Books</h1>
-
-<table>
+<table border=1 frame=hsides rules=rows>
   <thead>
     <tr>
       <th>Title</th>
+      <th>Author</th>
+      <th>Price</th>
+      <th>Published date</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,15 +17,18 @@
   <tbody>
     <% @books.each do |book| %>
       <tr>
-        <td><%= book.title %></td>
+      <td><em><%= book.title %></em></td>
+      <td><b><%= book.author %></b></td>
+      <td>$ <%= book.price %></td>
+      <td><%= book.published_date %></td>
         <td><%= link_to 'Show', book %></td>
-        <td><%= link_to 'Edit', edit_book_path(book) %></td>
+        <td><%= link_to 'Edit', edit_book_path(book), data:{ notice: 'Edit?'} %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+</center>
 <br>
 
 <%= link_to 'New Book', new_book_path %>
