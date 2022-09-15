@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 <center>
-<h1>NNNNEWWWW bOOk cool!</h1>
-<h1>AAAAAAAAAAA WORK PLEASE </h1>
+<h1>My Library</h1>
+
 
 <table border=1 frame=hsides rules=rows>
   <thead>
@@ -22,7 +22,7 @@
       <td>$ <%= book.price %></td>
       <td><%= book.published_date %></td>
         <td><%= link_to 'Show', book %></td>
-        <td><%= link_to 'Edit', edit_book_path(book), data:{ notice: 'Edit?'} %></td>
+        <td><%= link_to 'Edit', edit_book_path(book)%></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
